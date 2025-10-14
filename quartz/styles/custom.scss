@@ -2,13 +2,13 @@
 
 
 /* 全局正文字号更大一些 */
-:root { --font-size-base: 16px; }      /* 原来常见是 16–17px */
-html { font-size: clamp(16px, 1.05vw + 14px, 18px); }
+:root { --font-size-base: 15px; } 
+html { font-size: clamp(15px, 1.05vw + 14px, 18px); }
 
 .markdown-body {
   font-size: var(--font-size-base);
   line-height: 1.75;
-  max-width: 75ch;        /* 65–75 字符一行，便于阅读 */
+  max-width: 65ch;        /* 65–75 字符一行，便于阅读 */
   margin-inline: auto;
 }
 
