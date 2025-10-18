@@ -6,9 +6,8 @@ description: From contextual bandit to PPO.
 ---
 
 ## Problem Setup
-For simplicity, let us first consider a one-step decision-making process (also known as a contextual bandit).
-
-
+For simplicity, let us first consider a **one-step** decision-making process (also known as a contextual bandit).
+![[one_step_policy.png]]
 Let $s \in \mathcal S$ be the **state vector** of the environment, describing the current situation or configuration the agent observes (for example, the position of a robot, or the market condition in trading). Let $a \in \mathcal A$ be the **action** taken by the agent — a decision or move that affects the environment (e.g., moving left/right, buying/selling). The **reward function**, denoted by $r(a, s)$, assigns a numerical score to each action–state pair, indicating how desirable the action is when taken in that state.
 
 The agent’s behavior is characterized by a **policy**, represented as a conditional probability distribution $\pi(a \mid s),$ which specifies the probability of selecting each possible action $a$ given the current state $s$.
