@@ -32,6 +32,9 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
+      - name: Add .nojekyll file
+        run: touch public/.nojekyll
+
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
