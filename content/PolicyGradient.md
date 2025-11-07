@@ -279,43 +279,43 @@ $$
    \Big\}.
 $$
 
-> Derivation:
+>Derivation:
 >
-> We have the original formula
-> $$
-> \theta^{k+1} = \arg\max_{\theta}
->  \{ R(\theta) - \beta D(\theta, \theta^k) \}
-> $$
-> From off-policy estimation, we have
-> $$
-> \begin{aligned}
-> \nabla_\theta R(\pi_\theta)
->  = &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
->  \frac{\pi_\theta(a|s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
->  \nabla_\theta \log \pi_\theta(a\mid s)
->  \right] \\
->  = &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
->  \frac{1}{\pi_{\mathrm{data}}(a|s)} A(a,s)
->  \nabla_\theta \pi_\theta(a\mid s)
->  \right] \\
->  = &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
->  \frac{\nabla_\theta \pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
->  \right] \\
->  = &~ \nabla_\theta \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
->  \frac{\pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
->  \right] \\
-> \end{aligned}
-> $$
-> Taking integration, we have
-> $$
-> \begin{aligned}
->  R(\pi_\theta)
-> = &~  \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
->  \frac{\pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
->  \right] \\
-> \end{aligned}
-> $$
-> Substitute above to the original formula, we get the final result. 
+>We have the original formula
+>$$
+>\theta^{k+1} = \arg\max_{\theta}
+>\{ R(\theta) - \beta D(\theta, \theta^k) \}
+>$$
+>From off-policy estimation, we have
+>$$
+>\begin{aligned}
+>\nabla_\theta R(\pi_\theta)
+>= &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
+>\frac{\pi_\theta(a|s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
+>\nabla_\theta \log \pi_\theta(a\mid s)
+>\right] \\
+>= &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
+>\frac{1}{\pi_{\mathrm{data}}(a|s)} A(a,s)
+>\nabla_\theta \pi_\theta(a\mid s)
+>\right] \\
+>= &~ \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
+>\frac{\nabla_\theta \pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
+>\right] \\
+>= &~ \nabla_\theta \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
+>\frac{\pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
+>\right] \\
+>\end{aligned}
+>$$
+>Taking integration, we have
+>$$
+>\begin{aligned}
+>R(\pi_\theta)
+>= &~  \mathbb E_{p_{\pi_{\mathrm{data}}}}\left[
+>\frac{\pi_\theta(a\mid s)}{\pi_{\mathrm{data}}(a|s)} A(a,s)
+>\right] \\
+>\end{aligned}
+>$$
+>Substitute above to the original formula, we get the final result. 
 
 The penalty term is usually the **KL divergence**:
 
